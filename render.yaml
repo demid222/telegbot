@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: pipisa-cleaner-bot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        value: ВСТАВЬ_СЮДА_СВОЙ_ТОКЕН
