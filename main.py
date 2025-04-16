@@ -38,10 +38,8 @@ async def delete_past_messages(context: ContextTypes.DEFAULT_TYPE):
 if __name__ == "__main__":
     token = os.getenv("BOT_TOKEN")
     app = ApplicationBuilder().token(token).build()
-    chat_id = "@your_group_id"  # Укажи сюда ID своей группы или username
+    chat_id = "-1002604357013"  # Укажи сюда ID своей группы или username
     
-    # Удаление старых сообщений (например, каждые 5 минут)
-    app.job_queue.run_repeating(delete_past_messages, interval=300, first=0, context=chat_id)
     
     app.add_handler(MessageHandler(filters.ALL, delete_message))
     print("Бот запущен.")
